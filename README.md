@@ -1,3 +1,5 @@
+Disclaimer: recent changes to Stripe's export process have broken this project.  Anyone wishing to use this code will have to fix it.  Look at the WIP-updates branch for initial work that has been done, and check out the issue tracker for the correct formulas to compute the right sums of the fees, charges/etc.
+
 # Stripe 2 OFX #
 
 A small command line utility that converts the [Stripe](http://stripe.com) transfer exports  (CSV) to the [OFX](http://en.wikipedia.org/wiki/Open_Financial_Exchange) file format often used by accounting software for bank statement imports.
@@ -37,7 +39,7 @@ install dependencies
 npm install
 ```
 
-Download data from Stripe.  Go into your dashboard, click 'Transfers' on the left navbar.  
+Download data from Stripe.  Go into your dashboard, click 'Transfers' on the left navbar.
 Click 'View All Transfers', then 'export' in the upper right.
 
 Place your transfers.csv file in the stripe2ofx directory and run:
@@ -49,7 +51,7 @@ When the app is done, it will spit out a .OFX which you can import into Quickboo
 (such as Stripe)
 
 ## Known Limitations ##
-Currently, this app only supports files where all transactions are the same currency.  
+Currently, this app only supports files where all transactions are the same currency.
 
 If a file has multiple currencies, such as Euros and Dollars mixed together, it will throw an error.
 
